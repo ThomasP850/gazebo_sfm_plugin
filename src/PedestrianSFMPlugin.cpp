@@ -149,7 +149,7 @@ void PedestrianSFMPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
 void PedestrianSFMPlugin::Reset()
 {
   // this->velocity = 0.8;
-  this->lastUpdate = 0;
+  this->lastUpdate = this->world->SimTime();
 
   // Read in the goals to reach
   if (this->sdf->HasElement("trajectory"))
